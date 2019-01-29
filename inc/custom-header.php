@@ -14,8 +14,10 @@
  *  --------------------------------------------------------------------------*/
 function the_charm_of_making_custom_header_setup() {
 	add_theme_support(
-		'custom-header', apply_filters(
-			'the_charm_of_making_custom_header_args', array(
+		'custom-header',
+		apply_filters(
+			'the_charm_of_making_custom_header_args',
+			array(
 				'default-text-color' => '000000',
 				'flex-height'        => true,
 				'wp-head-callback'   => 'the_charm_of_making_header_style',
@@ -122,28 +124,28 @@ if ( ! function_exists( 'the_charm_of_making_header_style' ) ) :
 			font-family: <?php echo esc_attr( get_theme_mod( 'header_font', 'Montserrat' ) ); ?>;
 		}
 
-      .widget-area .widget .nav-pills > li >a , 
-      .widget-area .widget .nav-pills > li >a:focus ,
-      .widget-area .widget .nav-pills > li.active >a , 
-      .widget-area .widget h2 , 
-      .widget-area .widget h2 a , 
-      .widget-area .widget .nav-pills > li.active >a:focus {
-         background: <?php echo esc_attr( get_theme_mod( 'sidebar_accent_color', '#0073AA' ) ); ?>;
+	  .widget-area .widget .nav-pills > li >a , 
+	  .widget-area .widget .nav-pills > li >a:focus ,
+	  .widget-area .widget .nav-pills > li.active >a , 
+	  .widget-area .widget h2 , 
+	  .widget-area .widget h2 a , 
+	  .widget-area .widget .nav-pills > li.active >a:focus {
+		 background: <?php echo esc_attr( get_theme_mod( 'sidebar_accent_color', '#0073AA' ) ); ?>;
 			color: <?php echo esc_attr( get_theme_mod( 'sidebar_accent_text_color', 'white' ) ); ?>;
-      }
+	  }
 
-      .widget-area {
-         background: <?php echo esc_attr( get_theme_mod( 'sidebar_background_color', 'rgba(0,0,0,0)' ) ); ?>;
+	  .widget-area {
+		 background: <?php echo esc_attr( get_theme_mod( 'sidebar_background_color', 'rgba(0,0,0,0)' ) ); ?>;
 			color: <?php echo esc_attr( get_theme_mod( 'sidebar_text_color', 'black' ) ); ?>;
 		}
 
-      .widget-area .widget {
-         background: <?php echo esc_attr( get_theme_mod( 'custom_widget_background_color', 'white' ) ); ?>;
-      }
+	  .widget-area .widget {
+		 background: <?php echo esc_attr( get_theme_mod( 'custom_widget_background_color', 'white' ) ); ?>;
+	  }
 
-      .widget-area .widget a { 
+	  .widget-area .widget a { 
 			color: <?php echo esc_attr( get_theme_mod( 'sidebar_link_color', 'blue' ) ); ?>;
-      }
+	  }
 
 		@media (max-width: 767px) {
 

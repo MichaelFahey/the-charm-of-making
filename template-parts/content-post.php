@@ -16,9 +16,9 @@
 
 	<?php
 
-   echo '   <a href="' . esc_url_raw( get_the_permalink()  ) . '">';
+	echo '   <a href="' . esc_url_raw( get_the_permalink() ) . '">';
 	echo '<h2>' . get_the_title() . '</h2></br>';
-   echo '   </a>';
+	echo '   </a>';
 
 	get_template_part( 'template-parts/featured-image' );
 

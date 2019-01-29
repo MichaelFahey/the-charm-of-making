@@ -947,7 +947,8 @@ function the_charm_of_making_customize_theme_add_fonts( $wp_customize ) {
 	/** Font Option Section */
 
 	$wp_customize->add_panel(
-		'fonts', array(
+		'fonts',
+		array(
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
@@ -957,16 +958,17 @@ function the_charm_of_making_customize_theme_add_fonts( $wp_customize ) {
 	);
 
 	$wp_customize->add_section(
-		'font_selection', array(
+		'font_selection',
+		array(
 			'title'    => 'Font Selection',
 			'priority' => 10,
 			'panel'    => 'fonts',
 		)
 	);
 
-
 	$wp_customize->add_setting(
-		'header_font', array(
+		'header_font',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -975,7 +977,8 @@ function the_charm_of_making_customize_theme_add_fonts( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'header_font_control', array(
+		'header_font_control',
+		array(
 			'label'    => 'Header Font',
 			'section'  => 'font_selection',
 			'settings' => 'header_font',
@@ -984,10 +987,9 @@ function the_charm_of_making_customize_theme_add_fonts( $wp_customize ) {
 		)
 	);
 
-
-
 	$wp_customize->add_setting(
-		'body_font', array(
+		'body_font',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -996,7 +998,8 @@ function the_charm_of_making_customize_theme_add_fonts( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'body_font_control', array(
+		'body_font_control',
+		array(
 			'label'    => 'Body Font',
 			'section'  => 'font_selection',
 			'settings' => 'body_font',
@@ -1005,9 +1008,9 @@ function the_charm_of_making_customize_theme_add_fonts( $wp_customize ) {
 		)
 	);
 
-
 	$wp_customize->add_setting(
-		'footer_font', array(
+		'footer_font',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -1016,7 +1019,8 @@ function the_charm_of_making_customize_theme_add_fonts( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'footer_font_control', array(
+		'footer_font_control',
+		array(
 			'label'    => 'Footer Font',
 			'section'  => 'font_selection',
 			'settings' => 'footer_font',

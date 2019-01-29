@@ -8,7 +8,7 @@
  */
 
 global $post;
-if ( is_object ($post) ) {
+if ( is_object( $post ) ) {
 	$cur_post_slug = $post->post_name;
 
 	$headline_slug = $cur_post_slug . '-headline';

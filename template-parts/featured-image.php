@@ -10,6 +10,6 @@
 if ( has_post_thumbnail() ) {
 	echo '<div class="col-xs-12 rightfloat">';
 				the_post_thumbnail( 'full' );
-            echo '&nbsp;';
+			echo '&nbsp;';
 	echo '</div>';
 }

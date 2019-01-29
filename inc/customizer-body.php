@@ -19,7 +19,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	/** Body Options Panel */
 
 	$wp_customize->add_panel(
-		'body', array(
+		'body',
+		array(
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
@@ -29,7 +30,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	);
 
 	$wp_customize->add_section(
-		'body_layout', array(
+		'body_layout',
+		array(
 			'title'    => 'Body Layout',
 			'priority' => 10,
 			'panel'    => 'body',
@@ -37,7 +39,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'body_container_option', array(
+		'body_container_option',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -47,7 +50,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'body_container_option_control', array(
+		'body_container_option_control',
+		array(
 			'label'      => __( 'Body Container Type', 'the-charm-of-making' ),
 			'section'    => 'body_layout',
 			'settings'   => 'body_container_option',
@@ -64,10 +68,9 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 		)
 	);
 
-
-
 	$wp_customize->add_setting(
-		'body_sidebar_sticky_toggle', array(
+		'body_sidebar_sticky_toggle',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -76,7 +79,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'body_sidebar_sticky_toggle_control', array(
+		'body_sidebar_sticky_toggle_control',
+		array(
 			'label'       => __( 'Sidebar Sticky', 'the-charm-of-making' ),
 			'description' => 'Sticky sidebar floats as page scrolls',
 			'section'     => 'body_layout',
@@ -90,9 +94,9 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 		)
 	);
 
-
 	$wp_customize->add_setting(
-		'sidebar_body_classes', array(
+		'sidebar_body_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -101,7 +105,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'sidebar_body_classes_control', array(
+		'sidebar_body_classes_control',
+		array(
 			'label'       => __( 'Body Classes (with sidebar)', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-9)',
 			'section'     => 'body_layout',
@@ -111,7 +116,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'sidebar_classes', array(
+		'sidebar_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -121,7 +127,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'sidebar_classes_control', array(
+		'sidebar_classes_control',
+		array(
 			'label'       => __( 'Sidebar Classes (with sidebar)', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-3)',
 			'section'     => 'body_layout',
@@ -133,22 +140,24 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	/** Body Image Section */
 
 	$wp_customize->add_section(
-		'background_section', array(
+		'background_section',
+		array(
 			'title'    => 'Body Image',
 			'priority' => 10,
 			'panel'    => 'body',
 		)
 	);
 
-/** ----------------------------------------------------------------------------
- *   background image
- *  ------------------------------------------------------------------------ */
+	/** ----------------------------------------------------------------------------
+	 *   background image
+	 *  ------------------------------------------------------------------------ */
 
 	$wp_customize->remove_control( 'background_image' );
 	$wp_customize->remove_section( 'background_image' );
 
 	$wp_customize->add_setting(
-		'background_image_toggle', array(
+		'background_image_toggle',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -158,7 +167,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'background_image_toggle_control', array(
+		'background_image_toggle_control',
+		array(
 			'label'    => __( 'Use Background Image', 'the-charm-of-making' ),
 			'section'  => 'background_section',
 			'settings' => 'background_image_toggle',
@@ -183,12 +193,13 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 			)
 		);
 
-/** ----------------------------------------------------------------------------
- *   body image
- *  ------------------------------------------------------------------------ */
+	/** ----------------------------------------------------------------------------
+	 *   body image
+	 *  ------------------------------------------------------------------------ */
 
 	$wp_customize->add_setting(
-		'body_image_toggle', array(
+		'body_image_toggle',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -198,7 +209,8 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'body_image_toggle_control', array(
+		'body_image_toggle_control',
+		array(
 			'label'    => __( 'Use Body Background Image', 'the-charm-of-making' ),
 			'section'  => 'background_section',
 			'settings' => 'body_image_toggle',
@@ -206,12 +218,13 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 			'choices'  => array(
 				'yes' => 'yes',
 				'no'  => 'no',
-				)
-			)
-		);
+			),
+		)
+	);
 
 	$wp_customize->add_setting(
-		'body_image_image', array(
+		'body_image_image',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -233,12 +246,13 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 			)
 		);
 
-/** ----------------------------------------------------------------------------
- *    Body Color Section
- *  ------------------------------------------------------------------------ */
+	/** ----------------------------------------------------------------------------
+	 *    Body Color Section
+	 *  ------------------------------------------------------------------------ */
 
 	$wp_customize->add_section(
-		'body_colors', array(
+		'body_colors',
+		array(
 			'title'    => 'Body Colors',
 			'priority' => 10,
 			'panel'    => 'body',
@@ -340,12 +354,13 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 		)
 	);
 
-/** ----------------------------------------------------------------------------
- *    Sidebar Color Section
- *  ------------------------------------------------------------------------ */
+	/** ----------------------------------------------------------------------------
+	 *    Sidebar Color Section
+	 *  ------------------------------------------------------------------------ */
 
 	$wp_customize->add_section(
-		'sidebar_colors', array(
+		'sidebar_colors',
+		array(
 			'title'    => 'Sidebar Colors',
 			'priority' => 10,
 			'panel'    => 'body',
@@ -414,7 +429,6 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 		)
 	);
 
-
 	/* ---------- sidebar text color --------------------------------- */
 	$wp_customize->add_setting(
 		'sidebar_text_color',
@@ -445,7 +459,6 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 			)
 		)
 	);
-
 
 	/* ---------- sidebar link color --------------------------------- */
 	$wp_customize->add_setting(
@@ -539,8 +552,6 @@ function the_charm_of_making_customize_theme_add_body( $wp_customize ) {
 			)
 		)
 	);
-
-
 
 }
 

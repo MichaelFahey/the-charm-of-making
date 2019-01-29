@@ -10,5 +10,5 @@
 if ( has_post_thumbnail() ) {
 	the_post_thumbnail( 'medium' );
 } else {
-   echo '&nbsp;';
+	echo '&nbsp;';
 }

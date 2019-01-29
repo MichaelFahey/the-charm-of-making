@@ -17,7 +17,7 @@
 	<div class="page-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
-		?>
+			?>
 
 			<p>
 			<?php
@@ -42,7 +42,7 @@
 				get_search_form();
 
 		else :
-		?>
+			?>
 
 			<p>It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.</p>
 			<?php

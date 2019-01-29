@@ -19,11 +19,11 @@
 		endif;
 
 		if ( 'post' === get_post_type() ) :
-		?>
+			?>
 		<div class="entry-meta">
 			<?php the_charm_of_making_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php
+			<?php
 		endif;
 		?>
 	</header><!-- .entry-header -->
@@ -51,7 +51,7 @@
 					'after'  => '</div>',
 				)
 			);
-		?>
+			?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

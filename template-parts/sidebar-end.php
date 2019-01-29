@@ -9,7 +9,7 @@
 
 echo '</div>  <!-- (body classes) -->';
 
-if( !( '' === get_theme_mod( 'sidebar_classes' ) ) ) {
+if ( ! ( '' === get_theme_mod( 'sidebar_classes' ) ) ) {
 	echo '<div  class="' . esc_attr( get_theme_mod( 'sidebar_classes' ) ) . '">';
 } else {
 	echo '<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-3" >';
@@ -18,11 +18,11 @@ if( !( '' === get_theme_mod( 'sidebar_classes' ) ) ) {
 ?>
 
    <div class="sidebar-sticky">
-      <div class="sidebar">
+	  <div class="sidebar">
 		   <div class="sidebar-debug" style="background:blue;color:white;position:fixed;top:60px;left:10px;">
-            <small>
+			<small>
 			  <div class="col-xs-12">
-			  	   <div class="col-xs-6">
+					 <div class="col-xs-6">
 					   headerOffset: <span id="headerOffset"></span></br>
 					   footerDepth: <span id="footerDepth"></span></br>
 				   </div>
@@ -32,10 +32,10 @@ if( !( '' === get_theme_mod( 'sidebar_classes' ) ) ) {
 					   sidebarMarginTop: <span id="sidebarMarginTop"></span></br>
 				   </div>
 			   </div>
-	         </small>
+			 </small>
 		   </div><!-- sidebar-debug -->
-	      <div id="secondary" class="widget-area">
-		      <?php dynamic_sidebar( 'sidebar-1' ); ?>
+		  <div id="secondary" class="widget-area">
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
 		   </div><!-- #secondary -->
 	   </div><!-- .sidebar -->
 	</div><!-- .sidebar-sticky -->

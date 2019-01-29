@@ -36,7 +36,7 @@ if ( ! function_exists( 'the_charm_of_making_setup' ) ) :
 		 */
 		add_theme_support( 'title-tag' );
 
-		add_theme_support( "custom-header" );
+		add_theme_support( 'custom-header' );
 
 		/*
 		 * Enable support for Post Thumbnails on posts and pages.
@@ -59,7 +59,8 @@ if ( ! function_exists( 'the_charm_of_making_setup' ) ) :
 		 * to output valid HTML5.
 		 */
 		add_theme_support(
-			'html5', array(
+			'html5',
+			array(
 				'search-form',
 				'comment-form',
 				'comment-list',
@@ -71,7 +72,9 @@ if ( ! function_exists( 'the_charm_of_making_setup' ) ) :
 		/*
 		 * set content_width
 		 */
-		if ( ! isset( $content_width ) ) $content_width = 900;
+		if ( ! isset( $content_width ) ) {
+			$content_width = 900;
+		}
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
@@ -82,7 +85,8 @@ if ( ! function_exists( 'the_charm_of_making_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support(
-			'custom-logo', array(
+			'custom-logo',
+			array(
 				'height'      => 250,
 				'width'       => 250,
 				'flex-width'  => true,
@@ -164,7 +168,6 @@ add_action( 'widgets_init', 'the_charm_of_making_widgets_init' );
 function the_charm_of_making_scripts() {
 
 	wp_enqueue_script( 'jquery' );
-
 
 	/**    Load Bootstrap CSS and JS */
 	if ( ! defined( 'ASD_BOOTSTRAP_ENQUEUED' ) ) {

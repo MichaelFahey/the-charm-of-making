@@ -22,9 +22,9 @@
 	echo wp_kses_post( short_content( get_the_content() ) );
 
 	echo '<div class="readmore">';
-   global $post;
-   $post_slug=$post->post_name;
-	echo '   <a href="' . esc_url_raw( get_the_permalink()  ) . '">';
+	global $post;
+	$post_slug = $post->post_name;
+	echo '   <a href="' . esc_url_raw( get_the_permalink() ) . '">';
 	echo '      Read More';
 	echo '   </a>';
 	echo '</div>';

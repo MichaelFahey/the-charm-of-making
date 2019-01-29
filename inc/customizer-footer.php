@@ -17,7 +17,8 @@
 function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 
 	$wp_customize->add_panel(
-		'footer', array(
+		'footer',
+		array(
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
@@ -29,7 +30,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 	/** Footer Layout Section */
 
 	$wp_customize->add_section(
-		'footer_details', array(
+		'footer_details',
+		array(
 			'title'    => 'Footer Layout',
 			'priority' => 10,
 			'panel'    => 'footer',
@@ -37,7 +39,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'footerleft_classes', array(
+		'footerleft_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -47,7 +50,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'footerleft_classes_control', array(
+		'footerleft_classes_control',
+		array(
 			'label'       => __( 'Footer Left Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4)',
 			'section'     => 'footer_details',
@@ -57,7 +61,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'footercenter_classes', array(
+		'footercenter_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -66,7 +71,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 		)
 	);
 	$wp_customize->add_control(
-		'footercenter_classes_control', array(
+		'footercenter_classes_control',
+		array(
 			'label'       => __( 'Footer Center Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4)',
 			'section'     => 'footer_details',
@@ -76,7 +82,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'footerright_classes', array(
+		'footerright_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -86,7 +93,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'footerright_classes_control', array(
+		'footerright_classes_control',
+		array(
 			'label'       => __( 'Footer Right Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4)',
 			'section'     => 'footer_details',
@@ -97,7 +105,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 
 	/** Footer Image Section */
 	$wp_customize->add_section(
-		'footer_image', array(
+		'footer_image',
+		array(
 			'title'    => 'Footer Image',
 			'priority' => 10,
 			'panel'    => 'footer',
@@ -130,7 +139,8 @@ function the_charm_of_making_customize_theme_add_footer( $wp_customize ) {
 	/** Footer Color Section */
 
 	$wp_customize->add_section(
-		'footer_colors', array(
+		'footer_colors',
+		array(
 			'title'    => 'Footer Colors',
 			'priority' => 10,
 			'panel'    => 'footer',

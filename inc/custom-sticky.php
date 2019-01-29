@@ -46,7 +46,7 @@ function the_charm_of_making_custom_sticky() {
 					function() {
 						var headerOffset     = jQuery('.site-header').height() + jQuery('.page-headline').height();
 						var sidebarHeight    = jQuery('.widget-area').height();
-                  var footerHeight     = jQuery('.site-footer').height();
+				  var footerHeight     = jQuery('.site-footer').height();
 						var footerDepth      = jQuery('.site-body').height() - sidebarHeight; 
 						var currentScroll    = jQuery(window).scrollTop();
 		
@@ -72,7 +72,7 @@ function the_charm_of_making_custom_sticky() {
 			}
 		</script>
 
-	<?php
+		<?php
 	}
 }
 add_action( 'wp_print_footer_scripts', 'the_charm_of_making_custom_sticky' );

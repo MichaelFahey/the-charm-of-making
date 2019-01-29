@@ -19,7 +19,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	$wp_customize->remove_control( 'display_header_text' );
 
 	$wp_customize->add_panel(
-		'header', array(
+		'header',
+		array(
 			'priority'       => 10,
 			'capability'     => 'edit_theme_options',
 			'theme_supports' => '',
@@ -31,43 +32,47 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	/** Header Layout Section */
 
 	$wp_customize->add_section(
-		'header_details', array(
+		'header_details',
+		array(
 			'title'    => 'Header Layout',
 			'priority' => 10,
 			'panel'    => 'header',
 		)
 	);
 
-   $wp_customize->add_setting(
-      'navbar_container_option', array(
-         'type'              => 'theme_mod',
-         'capability'        => 'edit_theme_options',
-         'transport'         => 'postMessage',
-         'default'           => 'container',
-         'sanitize_callback' => 'wp_filter_nohtml_kses', 
-      )   
-   );  
+	$wp_customize->add_setting(
+		'navbar_container_option',
+		array(
+			'type'              => 'theme_mod',
+			'capability'        => 'edit_theme_options',
+			'transport'         => 'postMessage',
+			'default'           => 'container',
+			'sanitize_callback' => 'wp_filter_nohtml_kses',
+		)
+	);
 
-   $wp_customize->add_control(
-      'navbar_container_option_control', array(
-         'label'      => __( 'Navbar Container Type', 'the-charm-of-making' ),
-         'section'    => 'header_details',
-         'settings'   => 'navbar_container_option',
-         'type'       => 'select',
-         'choices'    => array(
-            'container'       => 'container',
-            'container-fluid' => 'container-fluid',
-            'container-sm'    => 'container-sm',
-            'container-md'    => 'container-md',
-            'container-lg'    => 'container-lg',
-            'container-xl'    => 'container-xl',
-         ),
-         'capability' => 'edit_theme_options',
-      )   
-   ); 
+	$wp_customize->add_control(
+		'navbar_container_option_control',
+		array(
+			'label'      => __( 'Navbar Container Type', 'the-charm-of-making' ),
+			'section'    => 'header_details',
+			'settings'   => 'navbar_container_option',
+			'type'       => 'select',
+			'choices'    => array(
+				'container'       => 'container',
+				'container-fluid' => 'container-fluid',
+				'container-sm'    => 'container-sm',
+				'container-md'    => 'container-md',
+				'container-lg'    => 'container-lg',
+				'container-xl'    => 'container-xl',
+			),
+			'capability' => 'edit_theme_options',
+		)
+	);
 
 	$wp_customize->add_setting(
-		'preheaderleft_classes', array(
+		'preheaderleft_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -77,7 +82,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'preheaderleft_classes_control', array(
+		'preheaderleft_classes_control',
+		array(
 			'label'       => __( 'Pre Header Left Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-6)',
 			'section'     => 'header_details',
@@ -87,7 +93,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'preheaderright_classes', array(
+		'preheaderright_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -97,7 +104,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'preheaderright_classes_control', array(
+		'preheaderright_classes_control',
+		array(
 			'label'       => __( 'Pre Header Right Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-6)',
 			'section'     => 'header_details',
@@ -107,7 +115,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'headerleft_classes', array(
+		'headerleft_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -117,7 +126,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'headerleft_classes_control', array(
+		'headerleft_classes_control',
+		array(
 			'label'       => __( 'Header Left Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4)',
 			'section'     => 'header_details',
@@ -127,7 +137,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'headercenter_classes', array(
+		'headercenter_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -137,7 +148,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'headercenter_classes_control', array(
+		'headercenter_classes_control',
+		array(
 			'label'       => __( 'Header Center Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4)',
 			'section'     => 'header_details',
@@ -147,7 +159,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'headerright_classes', array(
+		'headerright_classes',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -157,7 +170,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'headerright_classes_control', array(
+		'headerright_classes_control',
+		array(
 			'label'       => __( 'Header Right Classes', 'the-charm-of-making' ),
 			'description' => '(default: col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4)',
 			'section'     => 'header_details',
@@ -170,7 +184,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	$wp_customize->remove_section( 'header_image' );
 
 	$wp_customize->add_section(
-		'header_image', array(
+		'header_image',
+		array(
 			'title'    => 'Header Image',
 			'priority' => 10,
 			'panel'    => 'header',
@@ -178,7 +193,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'header_background_image_toggle', array(
+		'header_background_image_toggle',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -188,7 +204,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'header_background_image_toggle_control', array(
+		'header_background_image_toggle_control',
+		array(
 			'label'    => __( 'Use Header Background Image', 'the-charm-of-making' ),
 			'section'  => 'header_image',
 			'settings' => 'header_background_image_toggle',
@@ -226,7 +243,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	/** Header Color Section */
 
 	$wp_customize->add_section(
-		'header_colors', array(
+		'header_colors',
+		array(
 			'title'    => 'Header Colors',
 			'priority' => 10,
 			'panel'    => 'header',
@@ -486,7 +504,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	/** Header Nav Section */
 
 	$wp_customize->add_section(
-		'header_nav', array(
+		'header_nav',
+		array(
 			'title'    => 'Menu',
 			'priority' => 10,
 			'panel'    => 'header',
@@ -494,7 +513,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(
-		'header_nav_location', array(
+		'header_nav_location',
+		array(
 			'type'              => 'theme_mod',
 			'capability'        => 'edit_theme_options',
 			'transport'         => 'postMessage',
@@ -504,7 +524,8 @@ function the_charm_of_making_customize_theme_add_header( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		'header_nav_location_control', array(
+		'header_nav_location_control',
+		array(
 			'label'    => __( 'Menu Position', 'the-charm-of-making' ),
 			'section'  => 'header_nav',
 			'settings' => 'header_nav_location',
